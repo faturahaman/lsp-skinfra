@@ -1,4 +1,4 @@
-<nav class="w-full py-6 px-4 md:px-8 flex items-center fixed z-50 bg-white/90 backdrop-blur-sm transition-all duration-300">
+<nav class="w-full py-6 px-4 md:px-8 flex items-center fixed z-50   transition-all duration-300">
     <div class="flex-1">
         <div class="inline-block rounded-lg overflow-hidden">
             <a href="{{ route('home') }}">
@@ -41,6 +41,13 @@
                before:transition-all before:duration-300 hover:before:w-3/4">
                 Artikel
             </a>
+             <a href="{{ url('/#gallery') }}" 
+               class="text-gray-700 font-medium px-4 py-2 rounded-lg transition-all duration-300 relative
+               hover:bg-gradient-to-r hover:from-yellow-50 hover:to-amber-50 hover:text-amber-600 hover:shadow-md hover:scale-105
+               before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-0.5 before:bg-amber-500 
+               before:transition-all before:duration-300 hover:before:w-3/4">
+                Galeri
+            </a>
 
             <a href="{{ url('/#contact') }}" 
                class="text-gray-700 font-medium px-4 py-2 rounded-lg transition-all duration-300 relative
@@ -72,6 +79,7 @@
     <a href="{{ route('profile') }}" class="text-gray-700 hover:text-custom-gold font-bold transition duration-300 text-2xl">Profil</a>
     <a href="{{ route('services') }}" class="text-gray-700 hover:text-custom-gold font-bold transition duration-300 text-2xl">Layanan</a>
     <a href="{{ route('articles') }}" class="text-gray-700 hover:text-custom-gold font-bold transition duration-300 text-2xl">Artikel</a>
+    <a href="{{ url('/#gallery') }}" class="text-gray-700 hover:text-custom-gold font-bold transition duration-300 text-2xl">Kontak</a>
     <a href="{{ url('/#contact') }}" class="text-gray-700 hover:text-custom-gold font-bold transition duration-300 text-2xl">Kontak</a>
 </div>
 

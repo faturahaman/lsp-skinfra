@@ -50,7 +50,7 @@ class ServiceResource extends Resource
                                 Forms\Components\FileUpload::make('gambar')
                                     ->label('Foto Layanan')
                                     ->image()
-                                    ->imageEditor() // Fitur crop/edit bawaan Filament
+                                    ->imageEditor() // Fitur crop
                                     ->directory('services')
                                     ->columnSpanFull(),
 
@@ -61,7 +61,7 @@ class ServiceResource extends Resource
                                     ->required(),
                             ]),
                     ])
-                    ->columnSpan(['lg' => 1]), // Mengambil 1 bagian dari 3 kolom grid
+                    ->columnSpan(['lg' => 1]), 
             ])
             ->columns(3); // Total Grid Layout adalah 3 kolom
     }

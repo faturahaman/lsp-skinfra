@@ -16,6 +16,7 @@ class PageController extends Controller
         $services = Service::latest()->take(3)->get();
         $galeries = Gallery::latest()->take(6)->get();
         $articles = Article::latest()->take(3)->get();
+        
         return view('pages.home', compact('profiles', 'services', 'articles', 'galeries'));
     }
 

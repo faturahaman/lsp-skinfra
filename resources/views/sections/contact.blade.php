@@ -36,7 +36,7 @@
                             </div>
                             <div>
                                 <p class="text-white/70 text-sm">Email</p>
-                                <a href="mailto:skinfra@gmail.com" class="font-semibold text-lg hover:text-yellow-100 transition">skinfra@gmail.com</a>
+                                <a href="mailto:{{ $profiles->email }}" class="font-semibold text-lg hover:text-yellow-100 transition">{{$profiles->email}}</a>
                             </div>
                         </div>
 
@@ -48,7 +48,7 @@
                             </div>
                             <div>
                                 <p class="text-white/70 text-sm">Nomor Telepon</p>
-                                <a href="https://wa.me/6281290996305" class="font-semibold text-lg hover:text-yellow-100 transition">0812 9099 6305</a>
+                                <a href="https://wa.me/{{ $profiles->telepon }} " class="font-semibold text-lg hover:text-yellow-100 transition">{{$profiles->telepon}}</a>
                             </div>
                         </div>
 
@@ -62,8 +62,7 @@
                             <div>
                                 <p class="text-white/70 text-sm">Alamat Kantor</p>
                                 <p class="font-medium leading-relaxed">
-                                    Jl. Bukit Cimanggu City Raya, Desa/Kelurahan Cilendek Timur,
-                                    Kec. Bogor Barat, Kota Bogor, Jawa Barat 16912
+                                    {{ $profiles->alamat }}
                                 </p>
                             </div>
                         </div>

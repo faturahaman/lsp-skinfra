@@ -88,7 +88,7 @@ class ArticleResource extends Resource
                     ->searchable()
                     ->weight('bold')
                     ->description(fn (Article $record): string => \Illuminate\Support\Str::limit(strip_tags($record->konten), 50)) // Menampilkan cuplikan isi di bawah judul
-                    ->wrap(), // Agar judul panjang turun ke bawah, tidak melebar
+                    ->wrap(), 
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Tanggal Terbit')
