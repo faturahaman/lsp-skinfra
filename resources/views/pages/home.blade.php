@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Beranda')
+
 @section('content')
     
     {{-- Hero Section --}}
@@ -8,8 +10,13 @@
     @include('sections.about')
 
     @include('sections.services')
-    @include('sections.articles')
+    
+    @include('sections.article')
+    
     @include('sections.gallery')
-    @include('sections.contact')
+    
+    <div id="contact">
+        @include('sections.contact')
+    </div>
 
 @endsection

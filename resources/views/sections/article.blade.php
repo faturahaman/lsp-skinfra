@@ -15,25 +15,7 @@
         <!-- Artikel Cards -->
         <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-0 max-w-6xl mx-auto mb-16 relative">
             
-            @php
-                $articles = [
-                    [
-                        'image' => 'https://images.unsplash.com/photo-1599819777150-14e304f58f50?q=80&w=600&auto=format&fit=crop',
-                        'title' => 'Judul Artikel A',
-                        'desc'  => 'Isi dari artikel keren kami'
-                    ],
-                    [
-                        'image' => 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=600&auto=format&fit=crop',
-                        'title' => 'Judul Artikel B',
-                        'desc'  => 'Isi dari artikel keren kami yang menjadi highlight hari ini'
-                    ],
-                    [
-                        'image' => 'https://images.unsplash.com/photo-1558905545-04de8ce392b6?q=80&w=600&auto=format&fit=crop',
-                        'title' => 'Judul Artikel C',
-                        'desc'  => 'Isi dari artikel keren kami'
-                    ]
-                ];
-            @endphp
+         
 
             @foreach($articles as $index => $item)
                 @php
@@ -48,32 +30,38 @@
                         
                         <!-- Gambar -->
                         <div class="relative h-56 md:h-64 overflow-hidden">
-                            <img src="{{ $item['image'] }}" 
-                                 alt="{{ $item['title'] }}" 
+                            <img src="{{ asset('storage/' . $item['gambar']) }}" 
+                                 alt="{{ $item->judul }}" 
                                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
 
-                        <!-- Konten -->
-                        <div class="p-6 text-white text-left">
-                            <h4 class="text-xl font-bold mb-2">{{ $item['title'] }}</h4>
-                            <p class="text-white/90 text-sm font-light leading-relaxed">
-                                {{ $item['desc'] }}
-                            </p>
+                      <!-- Konten -->
+                    <div class="p-6 text-white text-left">
+                        <h4 class="text-xl font-bold mb-2">
+                            {{ $item->judul }}
+                        </h4>
+
+                        <div class="text-white/90 text-sm font-light leading-relaxed 
+                                    line-clamp-3 prose prose-invert max-w-none">
+                            {!! $item->konten !!}
                         </div>
+                    </div>
 
                     </div>
                 </div>
             @endforeach
 
         </div>
-
+        
         <div class="flex justify-center">
-            <x-button 
+            <a href="/articles">
+
+                <x-button 
                 variant="outline" 
-                class="!px-10 !py-3 !border-custom-gold !text-custom-gold hover:!bg-custom-gold hover:!text-white transition-transform transform hover:scale-105"
-            >
+                class="!px-10 !py-3 !border-custom-gold !text-custom-gold hover:!bg-custom-gold hover:!text-white transition-transform transform hover:scale-105" >
                 Lihat Lebih banyak!
             </x-button>
+        </a>
         </div>
 
     </div>

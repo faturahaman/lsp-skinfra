@@ -11,6 +11,7 @@
     $classes = $baseClass . ' ' . ($variants[$variant] ?? $variants['primary']);
 @endphp
 
-<button {{ $attributes->merge(['class' => $classes]) }}>
+<div {{ $attributes->merge(['class' => $classes]) }}>
     {{ $slot }}
-</button>
+</div>
+    

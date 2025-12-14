@@ -111,9 +111,7 @@ class ProfileResource extends Resource
             ->paginated(false); // Opsional: Matikan pagination jika data cuma 1
     }
 
-    /* =========================
-       AKSES DIBATASI (TETAP)
-    ========================= */
+  
     public static function canCreate(): bool
     {
         return false; 
